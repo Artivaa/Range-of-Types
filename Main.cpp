@@ -5,52 +5,55 @@
 
 using namespace std;
 
-int main() {
- 
-    setlocale(LC_ALL, "Russian");
+int main() 
+{
+    setlocale(LC_ALL, "Rus");
+    cout << setw(20) << "Тип данных"
+        << setw(25) << "Минимальное значение"
+        << setw(25) << "Максимальное значение"
+        << setw(20) << "Размер (байты)" << endl;
 
-    cout << left << setw(15) << "Тип данных"
-        << setw(30) << "Минимальное значение"
-        << "Максимальное значение" << endl;
-    cout << string(75, '-') << endl;
+    cout << string(90, '-') << endl;
 
-    // Целые числа
-    cout << left << setw(15) << "int"
-        << setw(30) << numeric_limits<int>::min()
-        << numeric_limits<int>::max() << endl;
+    cout << setw(20) << "bool"
+        << setw(25) << (numeric_limits<bool>::min())
+        << setw(25) << (numeric_limits<bool>::max())
+        << setw(20) << sizeof(bool) << endl;
 
-    cout << left << setw(15) << "unsigned int"
-        << setw(30) << numeric_limits<unsigned int>::min()
-        << numeric_limits<unsigned int>::max() << endl;
+    cout << setw(20) << "short"
+        << setw(25) << (numeric_limits<short>::min())
+        << setw(25) << (numeric_limits<short>::max())
+        << setw(20) << sizeof(short) << endl;
 
-    cout << left << setw(15) << "short"
-        << setw(30) << numeric_limits<short>::min()
-        << numeric_limits<short>::max() << endl;
+    cout << setw(20) << "int"
+        << setw(25) << (numeric_limits<int>::min())
+        << setw(25) << (numeric_limits<int>::max())
+        << setw(20) << sizeof(int) << endl;
 
-    cout << left << setw(15) << "unsigned short"
-        << setw(30) << numeric_limits<unsigned short>::min()
-        << numeric_limits<unsigned short>::max() << endl;
+    cout << setw(20) << "long"
+        << setw(25) << (numeric_limits<long>::min())
+        << setw(25) << (numeric_limits<long>::max())
+        << setw(20) << sizeof(long) << endl;
 
-    cout << left << setw(15) << "long"
-        << setw(30) << numeric_limits<long>::min()
-        << numeric_limits<long>::max() << endl;
+    cout << setw(20) << "long long"
+        << setw(25) << (numeric_limits<long long>::min())
+        << setw(25) << (numeric_limits<long long>::max())
+        << setw(20) << sizeof(long long) << endl;
 
-    cout << left << setw(15) << "unsigned long"
-        << setw(30) << numeric_limits<unsigned long>::min()
-        << numeric_limits<unsigned long>::max() << endl;
+    cout << setw(20) << "float"
+        << setw(25) << (numeric_limits<float>::lowest())
+        << setw(25) << (numeric_limits<float>::max())
+        << setw(20) << sizeof(float) << endl;
 
-    // Числа с плавающей точкой
-    cout << left << setw(15) << "float"
-        << setw(30) << numeric_limits<float>::min()
-        << numeric_limits<float>::max() << endl;
+    cout << setw(20) << "double"
+        << setw(25) << (numeric_limits<double>::lowest())
+        << setw(25) << (numeric_limits<double>::max())
+        << setw(20) << sizeof(double) << endl;
 
-    cout << left << setw(15) << "double"
-        << setw(30) << numeric_limits<double>::min()
-        << numeric_limits<double>::max() << endl;
-
-    cout << left << setw(15) << "long double"
-        << setw(30) << numeric_limits<long double>::min()
-        << numeric_limits<long double>::max() << endl;
+    cout << setw(20) << "long double"
+        << setw(25) << (numeric_limits<long double>::lowest())
+        << setw(25) << (numeric_limits<long double>::max())
+        << setw(20) << sizeof(long double) << endl;
 
     return 0;
 }
